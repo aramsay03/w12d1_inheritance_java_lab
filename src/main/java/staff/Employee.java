@@ -40,8 +40,8 @@ public abstract class Employee {
         this.salary += raise;
     }
 
-    public int payBonus() {
-        int bonus = (int) (this.salary * (1.0f/100.0f));
+    public double payBonus() {
+        double bonus = this.salary * (1.0f/100.0f);
         return bonus;
     }
 }

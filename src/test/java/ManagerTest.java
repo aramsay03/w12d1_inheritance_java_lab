@@ -57,4 +57,15 @@ public class ManagerTest {
             assertEquals("UX Design", manager.getDeptName());
     }
 
+    @Test
+    public void canSalaryBeRaised() {
+        manager.raiseSalary(1500);
+        assertEquals(44170, manager.getSalary());
+    }
+
+    @Test
+    public void can1PercentSalaryBePayed() {
+        assertEquals(426.7, manager.payBonus(), 0.01);
+    }
+
 }
