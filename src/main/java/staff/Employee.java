@@ -17,7 +17,10 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        String payload = name;
+        if (payload != null && payload.equalsIgnoreCase("Success")) {
+            this.name = name;
+        }
     }
 
     public String getNiNumber() {

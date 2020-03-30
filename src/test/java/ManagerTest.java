@@ -40,6 +40,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void checkThatSetNameIsNotNull() {
+        manager.setName("");
+        assertEquals("Alan", manager.getName());
+    }
+
+    @Test
     public void canSetNiNumber() {
         manager.setNiNumber("JF 68 36 72 94 G");
         assertEquals("JF 68 36 72 94 G", manager.getNiNumber());
