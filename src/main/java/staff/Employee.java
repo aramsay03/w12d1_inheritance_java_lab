@@ -17,8 +17,7 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        String payload = name;
-        if (payload != null && payload.equalsIgnoreCase("Success")) {
+        if (name != "") {
             this.name = name;
         }
     }
@@ -36,7 +35,9 @@ public abstract class Employee {
     }
 
     public void setSalary(int salary) {
-        this.salary = salary;
+        if (salary >= 0) {
+            this.salary = salary;
+        }
     }
 
     public void raiseSalary(double raise) {

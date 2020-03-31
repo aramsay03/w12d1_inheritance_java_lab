@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class ManagerTest {
 
@@ -55,6 +56,12 @@ public class ManagerTest {
     public void canSetSalary() {
         manager.setSalary(60230);
         assertEquals(60230, manager.getSalary());
+    }
+
+    @Test
+    public void checkSetSalaryCantBeNegitive() {
+        manager.setSalary(-100);
+        assertEquals(42670, manager.getSalary());
     }
 
     @Test
